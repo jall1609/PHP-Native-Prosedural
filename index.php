@@ -45,6 +45,7 @@
 </header>
 
 <div id="main">
+
     <div id="jumbotron" class="d-flex justify-content-center">
         <img src="image/1.jpg" alt="">
         <div class="fade-item position-absolute"></div>
@@ -54,6 +55,28 @@
             </h2>
         </div>
     </div>
+    
+    <div id="daftar-barang">
+      <h3>Daftar Barang</h3>
+      <hr>
+      <div class="row ">
+          <?php for ($i = 0; $i < 4; $i++) { ?>
+              <div class="col d-flex justify-content-center col-md-3 my-3 ">
+                  <div class="card border-info" style="width: 15rem; height: 420px;">
+                      <a href="#">
+                          <img class="card-img-top" src="image/1.png" alt="Card image cap">
+                          <div class="card-body">
+                              <h5 class="card-title text-justify f-15 text-dark">Keyboard Gaming RGB Logitech G213 Prodigy </h5>
+                              <p class="card-text f-11">Rp. 300.000,-</p>
+                              <a href="#" class="btn btn-info mt-1">Beli</a>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+          <?php }; ?>
+      </div>
+  </div>
+  
 </div>
 
 <body>

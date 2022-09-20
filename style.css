@@ -1,4 +1,5 @@
 
+
 img.cardKatalog {
     width: 70%;
     margin-left: 19px;
@@ -7,6 +8,13 @@ img.cardKatalog {
 
 a, #daftar-katalog .row .col .card a {
     text-decoration: none;
+}
+.f-11 {
+    font-size: 11px;
+}
+.f-15 {
+    font-size: 15px;
+
 }
 #jumbotron {
     height: 400px;
