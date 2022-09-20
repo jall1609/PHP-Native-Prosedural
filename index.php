@@ -52,7 +52,7 @@
             <?php
             for ($i = 0; $i < 6; $i++) {
             ?>
-                <div class="col col-md-2 ">
+                <div class="col d-flex justify-content-center col-md-2 ">
                     <div class="card bg-info " style="width: 8rem;">
                         <a href="#" class="katalog">
                             <img class="cardKatalog rounded-circle" src="image/2.jpg" alt="Card image cap">
