@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <header>
@@ -42,6 +43,26 @@
         </div>
     </nav>
 </header>
+
+<div id="daftar-barang">
+    <h3>Daftar Barang</h3>
+    <hr>
+    <div class="row">
+        <div class="col col-md-3 my-3">
+            <div class="card border-info" style="width: 15rem; height: 420px;">
+                <a href="#">
+                    <img class="card-img-top" src="image/1.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-justify f-15 text-dark">Keyboard Logitech</h5>
+                        <p class="card-text f-11">Rp. 300.000,-</p>
+                        <a href="#" class="btn btn-info mt-1">Beli</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 <body>
     <div id="kumpulanScript">
