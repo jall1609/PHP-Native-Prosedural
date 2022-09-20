@@ -4,6 +4,6 @@ img.cardKatalog {
     margin-top: 15px;
 }
 
-a{
+a, #daftar-katalog .row .col .card a {
     text-decoration: none;
 }

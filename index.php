@@ -48,15 +48,21 @@
     <div id="daftar-katalog">
         <h3>Daftar Katalog</h3>
         <hr>
-        <div class="col col-md-2 ">
-            <div class="card bg-info " style="width: 8rem;">
-                <a href="#" class="katalog">
-                    <img class="cardKatalog rounded-circle" src="image/2.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="text-center  text-light">Keyboard</p>
+        <div class="row">
+            <?php
+            for ($i = 0; $i < 6; $i++) {
+            ?>
+                <div class="col col-md-2 ">
+                    <div class="card bg-info " style="width: 8rem;">
+                        <a href="#" class="katalog">
+                            <img class="cardKatalog rounded-circle" src="image/2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="text-center  text-light">Keyboard</p>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
+                </div>
+            <?php }; ?>
         </div>
     </div>
 
