@@ -1,5 +1,3 @@
-
-
 img.cardKatalog {
     width: 70%;
     margin-left: 19px;
@@ -24,16 +22,27 @@ a, #daftar-katalog .row .col .card a {
 #jumbotron img,
 .fade-item {
     border-radius: 30px;
-    width: 80%;
+}
+
+#jumbotron img {
+    width: 100%;
 }
 
 .fade-item {
     background-color: black;
     height: 340px;
     opacity: 0.7;
+    width: 73%;
 }
 
 #judul-jumbotron {
     top: 260px;
+}
 
+.row {
+    width: 100%;
+}
+
+#main {
+    width: 80%;
 }

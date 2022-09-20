@@ -45,7 +45,7 @@
 </header>
 
 <body>
-    <div id="main">
+    <div id="main" class="container">
 
         <div id="jumbotron" class="d-flex justify-content-center">
             <img src="image/1.jpg" alt="">
@@ -57,10 +57,10 @@
             </div>
         </div>
 
-        <div id="daftar-katalog">
+        <div id="daftar-katalog" class="mt-3">
             <h3>Daftar Katalog</h3>
             <hr>
-            <div class="row">
+            <div class="row ">
                 <?php
                 for ($i = 0; $i < 6; $i++) {
                 ?>
@@ -78,7 +78,7 @@
             </div>
         </div>
 
-        <div id="daftar-barang">
+        <div id="daftar-barang" class="my-5">
             <h3>Daftar Barang</h3>
             <hr>
             <div class="row ">
