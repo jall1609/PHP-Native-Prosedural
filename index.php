@@ -44,6 +44,18 @@
     </nav>
 </header>
 
+<div id="main">
+    <div id="jumbotron" class="d-flex justify-content-center">
+        <img src="image/1.jpg" alt="">
+        <div class="fade-item position-absolute"></div>
+        <div id="judul-jumbotron" class="position-absolute">
+            <h2 class="text-center text-light font-weight-bold">
+                Welcome
+            </h2>
+        </div>
+    </div>
+</div>
+
 <body>
     <div id="daftar-katalog">
         <h3>Daftar Katalog</h3>
