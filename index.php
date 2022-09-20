@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <header>
@@ -42,6 +43,18 @@
         </div>
     </nav>
 </header>
+
+<div id="main">
+    <div id="jumbotron" class="d-flex justify-content-center">
+        <img src="image/1.jpg" alt="">
+        <div class="fade-item position-absolute"></div>
+        <div id="judul-jumbotron" class="position-absolute">
+            <h2 class="text-center text-light font-weight-bold">
+                Welcome
+            </h2>
+        </div>
+    </div>
+</div>
 
 <body>
     <div id="kumpulanScript">
