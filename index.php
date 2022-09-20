@@ -44,62 +44,64 @@
     </nav>
 </header>
 
-<div id="main">
-
-    <div id="jumbotron" class="d-flex justify-content-center">
-        <img src="image/1.jpg" alt="">
-        <div class="fade-item position-absolute"></div>
-        <div id="judul-jumbotron" class="position-absolute">
-            <h2 class="text-center text-light font-weight-bold">
-                Welcome
-            </h2>
-        </div>
-    </div>
-    
-    <div id="daftar-barang">
-      <h3>Daftar Barang</h3>
-      <hr>
-      <div class="row ">
-          <?php for ($i = 0; $i < 4; $i++) { ?>
-              <div class="col d-flex justify-content-center col-md-3 my-3 ">
-                  <div class="card border-info" style="width: 15rem; height: 420px;">
-                      <a href="#">
-                          <img class="card-img-top" src="image/1.png" alt="Card image cap">
-                          <div class="card-body">
-                              <h5 class="card-title text-justify f-15 text-dark">Keyboard Gaming RGB Logitech G213 Prodigy </h5>
-                              <p class="card-text f-11">Rp. 300.000,-</p>
-                              <a href="#" class="btn btn-info mt-1">Beli</a>
-                          </div>
-                      </a>
-                  </div>
-              </div>
-          <?php }; ?>
-      </div>
-  </div>
-  
-</div>
-
 <body>
-    <div id="daftar-katalog">
-        <h3>Daftar Katalog</h3>
-        <hr>
-        <div class="row">
-            <?php
-            for ($i = 0; $i < 6; $i++) {
-            ?>
-                <div class="col d-flex justify-content-center col-md-2 ">
-                    <div class="card bg-info " style="width: 8rem;">
-                        <a href="#" class="katalog">
-                            <img class="cardKatalog rounded-circle" src="image/2.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <p class="text-center  text-light">Keyboard</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            <?php }; ?>
+    <div id="main">
+
+        <div id="jumbotron" class="d-flex justify-content-center">
+            <img src="image/1.jpg" alt="">
+            <div class="fade-item position-absolute"></div>
+            <div id="judul-jumbotron" class="position-absolute">
+                <h2 class="text-center text-light font-weight-bold">
+                    Welcome
+                </h2>
+            </div>
         </div>
+
+        <div id="daftar-katalog">
+            <h3>Daftar Katalog</h3>
+            <hr>
+            <div class="row">
+                <?php
+                for ($i = 0; $i < 6; $i++) {
+                ?>
+                    <div class="col d-flex justify-content-center col-md-2 ">
+                        <div class="card bg-info " style="width: 8rem;">
+                            <a href="#" class="katalog">
+                                <img class="cardKatalog rounded-circle" src="image/2.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="text-center  text-light">Keyboard</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <?php }; ?>
+            </div>
+        </div>
+
+        <div id="daftar-barang">
+            <h3>Daftar Barang</h3>
+            <hr>
+            <div class="row ">
+                <?php for ($i = 0; $i < 4; $i++) { ?>
+                    <div class="col d-flex justify-content-center col-md-3 my-3 ">
+                        <div class="card border-info" style="width: 15rem; height: 420px;">
+                            <a href="#">
+                                <img class="card-img-top" src="image/1.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title text-justify f-15 text-dark">Keyboard Gaming RGB Logitech G213 Prodigy </h5>
+                                    <p class="card-text f-11">Rp. 300.000,-</p>
+                                    <a href="#" class="btn btn-info mt-1">Beli</a>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <?php }; ?>
+            </div>
+        </div>
+
+
     </div>
+
 
     <div id="kumpulanScript">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
