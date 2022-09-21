@@ -1,6 +1,5 @@
 <?php
 include 'header.php';
-require 'koneksi.php';
 $resultKatalog = mysqli_query($conn, "SELECT * FROM katalog");
 ?>
 <h2>Operasi Katalog</h2>

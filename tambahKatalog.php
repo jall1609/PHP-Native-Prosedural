@@ -1,6 +1,5 @@
 <?php
 include 'header.php';
-require 'koneksi.php';
 ?>
 <div class="container mt-5">
     <form action="" method="post" enctype="multipart/form-data">
