@@ -3,7 +3,7 @@ include 'header.php';
 ?>
 <h2>Operasi Katalog</h2>
 <hr>
-<button type="button" class="btn btn-info my-3">Tambah Katalog</button>
+<button type="button" class="btn btn-info my-3" onclick="document.location='tambahKatalog.php'">Tambah Katalog</button>
 <table class="table">
     <thead class="thead bg-info text-center text-white">
         <tr>
