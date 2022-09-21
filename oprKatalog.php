@@ -30,7 +30,7 @@ $resultKatalog = mysqli_query($conn, "SELECT * FROM katalog");
                 <td class="align-middle ">
                     <div class="d-flex justify-content-center">
                         <button class="btn btn-warning mr-3">Edit</button>
-                        <button class="btn btn-danger">Hapus</button>
+                        <button class="btn btn-danger" onclick="document.location='hapusKatalog.php?id_katalog=<?= $katalog['id_katalog']; ?>'">Hapus</button>
                     </div>
                 </td>
             </tr>
