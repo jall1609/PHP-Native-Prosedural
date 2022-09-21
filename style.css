@@ -46,3 +46,7 @@ a, #daftar-katalog .row .col .card a {
 #main {
     width: 80%;
 }
+
+.vertical-tengah {
+    vertical-align: middle;
+}
