@@ -1,5 +1,6 @@
 <?php
 include 'header.php';
+$resultBarang = mysqli_query($conn, "SELECT * FROM barang INNER JOIN katalog ON barang.id_katalog=katalog.id_katalog");
 ?>
 
 <div class="container mt-5">
@@ -19,13 +20,14 @@ include 'header.php';
         </thead>
         <tbody>
             <?php
-            for ($i = 1; $i < 5; $i++) { ?>
+            $i = 1;
+            foreach ($resultBarang as $value) { ?>
                 <tr>
                     <td scope="row" class="align-middle"><?= $i; ?></td>
-                    <td><img src="image/1.png" alt="" width="50%"></td>
-                    <td class="align-middle">Keyboard Logitech G Pro</td>
-                    <td class="align-middle">Rp. 600.000</td>
-                    <td class="align-middle">Keyboard</td>
+                    <td><img src="image/<?php echo $value['nama_gambar']; ?>" alt="" width="50%"></td>
+                    <td class="align-middle"><?php echo $value['nama_barang']; ?></td>
+                    <td class="align-middle">Rp. <?= number_format($value['harga'], '0', '.   ', '.'); ?></td>
+                    <td class="align-middle"><?= $value['nama_katalog']; ?></td>
                     <td class="align-middle">
                         <button onclick="document.location='editBarang.php?id_barang=<?= $value['id_barang']; ?>'" class="btn btn-warning mr-3">Edit</button><button onclick="document.location='hapusBarang.php?id_barang=<?= $value['id_barang']; ?>'" class="btn btn-danger">Hapus</button>
                     </td>
