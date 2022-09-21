@@ -23,4 +23,60 @@ $dataKatalog = mysqli_fetch_assoc($resultKatalog);
 </div>
 <?php
 include 'footer.php';
+
+if (isset($_POST['submit'])) {
+
+
+    function edit()
+    {
+        global $conn;
+        global $id_katalog;
+        global $dataKatalog;
+        $namaKatalog = htmlspecialchars($_POST['namaKatalog']);
+
+        $namaFile = $_FILES['gambar']['name'];
+        $ukuranFile = $_FILES['gambar']['size'];
+        $error = $_FILES['gambar']['error'];
+        $tmpName = $_FILES['gambar']['tmp_name'];
+
+
+        //mengecek extensi file yg di upload
+        $ekstensiYangDibolehkan = ['jpg', 'jpeg', 'png'];
+        $ekstensiGambar = explode('.', $namaFile);
+        $ekstensiGambar = strtolower(end($ekstensiGambar));
+
+
+        if ($namaKatalog != '') {
+            if ($error == 4) {
+                $query = "UPDATE `katalog` SET `nama_katalog` = '$namaKatalog' WHERE `katalog`.`id_katalog` = $id_katalog";
+                mysqli_query($conn, $query);
+            } else if ($error == 0) {
+                unlink('image/' . $dataKatalog["nama_gambar_katalog"]);
+
+                $namaFileBaru = uniqid() . '.' . $ekstensiGambar;
+                move_uploaded_file($tmpName, 'image/' .  $namaFileBaru);;
+                $query = "UPDATE `katalog` SET `nama_katalog` = '$namaKatalog', `nama_gambar_katalog` = '$namaFileBaru'  WHERE `katalog`.`id_katalog` = $id_katalog";
+                mysqli_query($conn, $query);
+                // echo 'asdasd';
+
+                if (!in_array($ekstensiGambar, $ekstensiYangDibolehkan)) {
+                    echo "<script>alert('format harus jpg, jpeg dan png')</script>";
+                    return false;
+                }
+                if ($ukuranFile > 1000000) {
+                    echo "<script>alert('ukuran gambar max 1mb')</script>";
+                    return false;
+                }
+            }
+
+            header('Location:oprKatalog.php');
+        } else if ($namaKatalog == '') {
+            echo "<script>alert('isi data terlebih dahulu')</script>";
+            return false;
+        }
+    }
+    $namaFileBaru = edit();
+    // print_r($_POST);
+    // print_r($_FILES);
+}
 ?>
