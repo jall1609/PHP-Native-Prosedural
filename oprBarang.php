@@ -27,7 +27,7 @@ include 'header.php';
                     <td class="align-middle">Rp. 600.000</td>
                     <td class="align-middle">Keyboard</td>
                     <td class="align-middle">
-                        <button class="btn btn-warning mr-3">Edit</button><button class="btn btn-danger">Hapus</button>
+                        <button onclick="document.location='editBarang.php?id_barang=<?= $value['id_barang']; ?>'" class="btn btn-warning mr-3">Edit</button><button onclick="document.location='hapusBarang.php?id_barang=<?= $value['id_barang']; ?>'" class="btn btn-danger">Hapus</button>
                     </td>
                 </tr>
             <?php
