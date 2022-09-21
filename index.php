@@ -1,5 +1,7 @@
 <?php
 include 'header.php';
+$resultBarang = mysqli_query($conn, "SELECT * FROM barang");
+$resultKatalog = mysqli_query($conn, "SELECT * FROM katalog LIMIT 6");
 ?>
 <div id="jumbotron" class="d-flex justify-content-center">
     <img src="image/1.jpg" alt="">
@@ -16,14 +18,14 @@ include 'header.php';
     <hr>
     <div class="row ">
         <?php
-        for ($i = 0; $i < 6; $i++) {
+        foreach ($resultKatalog as $katalog) {
         ?>
             <div class="col d-flex justify-content-center col-md-2 ">
                 <div class="card bg-info " style="width: 8rem;">
-                    <a href="#" class="katalog">
-                        <img class="cardKatalog rounded-circle" src="image/2.jpg" alt="Card image cap">
+                    <a href="Katalog.php?x=<?= $katalog['nama_katalog']; ?>" class="katalog">
+                        <img class="cardKatalog rounded-circle" src="image/<?= $katalog['nama_gambar_katalog']; ?>" alt="Card image cap">
                         <div class="card-body">
-                            <p class="text-center  text-light">Keyboard</p>
+                            <p class="text-center  text-light"><?= $katalog['nama_katalog']; ?></p>
                         </div>
                     </a>
                 </div>
@@ -36,14 +38,14 @@ include 'header.php';
     <h3>Daftar Barang</h3>
     <hr>
     <div class="row ">
-        <?php for ($i = 0; $i < 4; $i++) { ?>
+        <?php foreach ($resultBarang as $barang) { ?>
             <div class="col d-flex justify-content-center col-md-3 my-3 ">
                 <div class="card border-info" style="width: 15rem; height: 420px;">
                     <a href="#">
-                        <img class="card-img-top" src="image/1.png" alt="Card image cap">
+                        <img class="card-img-top" src="image/<?= $barang['nama_gambar']; ?>" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title text-justify f-15 text-dark">Keyboard Gaming RGB Logitech G213 Prodigy </h5>
-                            <p class="card-text f-11">Rp. 300.000,-</p>
+                            <h5 class="card-title text-justify f-15 text-dark"><?= $barang['nama_barang']; ?> </h5>
+                            <p class="card-text f-11">Rp. <?= number_format($barang['harga'], '0', '.   ', '.'); ?>,-</p>
                             <a href="#" class="btn btn-info mt-1">Beli</a>
                         </div>
                     </a>

@@ -4,7 +4,7 @@ img.cardKatalog {
     margin-top: 15px;
 }
 
-a, #daftar-katalog .row .col .card a {
+a, .row .col .card a{
     text-decoration: none;
 }
 .f-11 {
