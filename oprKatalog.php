@@ -1,5 +1,7 @@
 <?php
 include 'header.php';
+require 'koneksi.php';
+$resultKatalog = mysqli_query($conn, "SELECT * FROM katalog");
 ?>
 <h2>Operasi Katalog</h2>
 <hr>
@@ -15,14 +17,15 @@ include 'header.php';
     </thead>
     <tbody>
         <?php
-        for ($i = 0; $i < 4; $i++) { ?>
+        $i = 1;
+        foreach ($resultKatalog as $katalog) { ?>
             <tr>
-                <td class="align-middle text-center"><?= $i + 1; ?></td>
+                <td class="align-middle text-center"><?= $i; ?></td>
                 <td class="">
-                    <div class="d-flex justify-content-center"><img src="image/2.jpg" alt="" width="30%"></div>
+                    <div class="d-flex justify-content-center"><img src="image/<?php echo $katalog['nama_gambar_katalog']; ?>" alt="" width="30%"></div>
                 </td>
                 <td class="align-middle  text-center">
-                    Keyboard
+                    <?php echo $katalog['nama_katalog']; ?>
                 </td>
                 <td class="align-middle ">
                     <div class="d-flex justify-content-center">
@@ -32,6 +35,7 @@ include 'header.php';
                 </td>
             </tr>
         <?php
+            $i++;
         };
         ?>
     </tbody>
