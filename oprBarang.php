@@ -33,6 +33,7 @@ $resultBarang = mysqli_query($conn, "SELECT * FROM barang INNER JOIN katalog ON 
                     </td>
                 </tr>
             <?php
+                $i++;
             };
             ?>
         </tbody>
